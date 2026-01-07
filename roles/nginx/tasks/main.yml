@@ -1,0 +1,18 @@
+- name: install nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+  become: yes
+
+- name: deploy index.html
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+  become: yes
