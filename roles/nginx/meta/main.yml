@@ -1,0 +1,7 @@
+---
+galaxy_info:
+  author: "CHABANE"
+  description: "Rôle Ansible pour installer et configurer NGINX"
+  company: "MaSociete"
+  license: "MIT"
+dependencies: []

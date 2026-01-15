@@ -1,0 +1,12 @@
+---
+- name: Installer NGINX
+  apt:
+    name: nginx
+    state: present
+  become: yes
+
+- name: Copier la configuration NGINX
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: restart nginx
